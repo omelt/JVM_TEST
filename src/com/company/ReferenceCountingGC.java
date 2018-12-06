@@ -3,7 +3,7 @@ package com.company;
 
 /**
  * VM args: -XX:+PrintGCDetails
- * java没有 使用了引用技术法
+ * java没有 使用了引用计数法
  */
 public class ReferenceCountingGC {
 
