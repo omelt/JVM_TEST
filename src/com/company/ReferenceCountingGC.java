@@ -9,18 +9,19 @@ public class ReferenceCountingGC {
 
     public Object instance = null;
 
-    private static final int _1MB = 1024*1024;
+    private static final int _1MB = 1024 * 1024;
 
     //占用点内存
-    public byte[] bigSize = new byte[2*_1MB];
+    public byte[] bigSize = new byte[2 * _1MB];
 
     public static void main(String[] args) {
-        ReferenceCountingGC objA=new ReferenceCountingGC();
-        ReferenceCountingGC objB=new ReferenceCountingGC();
-        objA.instance=objB;
-        objB.instance=objA;
+        ReferenceCountingGC objA = new ReferenceCountingGC();
+        ReferenceCountingGC objB = new ReferenceCountingGC();
+        objA.instance = objB;
+        objB.instance = objA;
 
-        objA=null;objB=null;
+        objA = null;
+        objB = null;
 
         //尝试回收
         //如果使用了 引用计数算法 则不会回收
