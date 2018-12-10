@@ -1,5 +1,8 @@
 package com.company;
 
+/**
+ * 字段解析
+ */
 public class FieldResolution {
     interface Interface0 {
         int A = 0;
