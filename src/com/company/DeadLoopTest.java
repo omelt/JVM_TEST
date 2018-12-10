@@ -26,5 +26,6 @@ public class DeadLoopTest {
         Thread thread2 = new Thread(script);
         thread1.start();
         thread2.start();
+        //<client>造成多个线程阻塞
     }
 }
