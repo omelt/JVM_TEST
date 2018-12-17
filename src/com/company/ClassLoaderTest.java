@@ -33,3 +33,4 @@ public class ClassLoaderTest {
         System.out.println(obj instanceof com.company.ClassLoaderTest);
     }
 }
+// 显然是同一个类 但是显示是false 因为不是同意类加载器加载 是两个独立类
