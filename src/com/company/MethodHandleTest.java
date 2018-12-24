@@ -39,5 +39,15 @@ public class MethodHandleTest {
          */
         return lookup().findVirtual(object.getClass(),"println",mt)
                 .bindTo(object);
+
+//        模拟了invokevirtual指令的执行过程
+//        仅仅java角度上反射和MethodHandle(方法句柄)的使用效果很相似
+//        本质上,他们都是在模拟方法调用,但是反射是模拟java代码上的调用.
+//        而MethodHandle是在模拟字节码层面的调用.lookup中包括三个方法
+//        findStatic(),findVirtual(),findSpecial()对应
+//        invokestatic;invokevirtual&invokeinterface;invokespecial
+//        这几条指令的校验行为.
+//        反射包含的信息多,包含java端的各种表示方式,是重量级操作,而另一个是轻量级的
+//        MethodHandle是字节码方法指令的模拟,所以虚拟机会对其作各种优化.
     }
 }
