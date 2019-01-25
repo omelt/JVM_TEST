@@ -20,6 +20,7 @@ public class SlotFlueGC {
         int a=0;
         System.gc();
 //        进行回收
+
     }
     /**
      * placehold能回收的根本原因是局部变量表的slot是否还存有关于placeholder数组
